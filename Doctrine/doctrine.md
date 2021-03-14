@@ -43,7 +43,8 @@
 
 ```
 
-###### ou encore directement en injectétant l'object avec l'id présent en paramètre dans la route
+###### ou encore directement recupérer l'objet avec l'id présent en paramètre dans la route (ParamConverter)
+_lien utile_ : https://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/annotations/converters.html
 ```
     /**
      * @Route("/product/{id}", name="product_show")
@@ -158,7 +159,7 @@
     }
 
 ```
-_en utilisant l'injection de dépendance nous avons une autre façon d'écrire cette methode_
+_en utilisant le paramConverter nous avons une autre façon d'écrire cette methode_
 ```
     /**
      * @Route("/product/edit/{id}")
