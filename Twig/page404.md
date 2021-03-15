@@ -42,6 +42,7 @@ templates/
 ```
 
 ###### 4 Tester la page
+en *dev*
 ```
 https://localhost:8000/index.php/_error/404
 
