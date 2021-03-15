@@ -1,5 +1,6 @@
 # Personnaliser une page 404 pour son application Symfony
 lien utile : https://nouvelle-techno.fr/actualites/live-coding-creer-des-pages-derreur-personnalisees-avec-symfony
+
 _installer le packatage suivant_
 ```
  composer require symfony/twig-pack
