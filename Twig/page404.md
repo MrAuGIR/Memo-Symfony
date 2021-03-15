@@ -1,5 +1,8 @@
 # Personnaliser une page 404 pour son application Symfony
-lien utile : https://nouvelle-techno.fr/actualites/live-coding-creer-des-pages-derreur-personnalisees-avec-symfony
+lien utile : 
+a https://nouvelle-techno.fr/actualites/live-coding-creer-des-pages-derreur-personnalisees-avec-symfony
+
+
 
 _installer le packatage suivant_
 ```
@@ -43,3 +46,5 @@ templates/
 https://localhost:8000/index.php/_error/404
 
 ```
+
+ou passer en environnement *prod*
