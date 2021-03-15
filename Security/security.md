@@ -1,5 +1,7 @@
 # 1 Securisé les routes
 
+lien utile : https://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/annotations/security.html
+
 ### A *IsGranted()* utiliser pour restrindre l'accès à certaine _route_
 
 les imports :
