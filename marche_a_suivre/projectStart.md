@@ -18,6 +18,6 @@
         $faker->addProvider(new \Bluemmb\Faker\PicsumPhotosProvider($faker))
     ```
     4. Lancer les fixtures : `` php bin/console doctrine:fixtures:load ``
-    
+9. Definir les routes et les controllers
 
 
