@@ -17,5 +17,7 @@
         $faker = Factory::create('fr_FR')
         $faker->addProvider(new \Bluemmb\Faker\PicsumPhotosProvider($faker))
     ```
-
+    4. Lancer les fixtures : `` php bin/console doctrine:fixtures:load ``
     
+
+
