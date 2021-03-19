@@ -16,22 +16,27 @@
 
 8. formulaire d'enregistrement : ``php bin/console make:registration-form``
     1. Possible warning si **symfonycasts/verify-email-bundle** non installé et option d'email selectionné
+        ``composer require symfonycasts/verify-email-bundle``
     2. bonne pratique de logguer les users après l'enregistrement
     3. Attention après la mise en place du controller de registration, il y a des configuration a faire, exemple: redirectroute dans __verifyUserEmail()__ dans __registrationController__.
     4. faire fichier migrate et doctrine migration
 
-9. Oublie mot de passe :
-    composer require symfonycasts/reset-password-bundle
-    php bin/console make:reset-password
-    La commande va demander :
-    1. quelle route pour les utilisateurs qui vont reinitialiser leur mot de passe avec success. ( ex: app_login)
-    2. l'adresse email qui va envoyer les messages aux users
+9.  Oublie mot de passe :
+    
+    `` composer require symfonycasts/reset-password-bundle ``
+    `` php bin/console make:reset-password ``
+    
+    1. La commande va demander :
+        1. quelle route pour les utilisateurs qui vont reinitialiser leur mot de passe avec success. ( ex: app_login)
+        2. l'adresse email qui va envoyer les messages aux users
 
-    3. Ensuite faire une make:migration
-    puis une doctrine:migrations:migrate
-
-    4. Ensuite penser a ajouter le lien vers 'app_forgot_password_request' dans le template twig de login
-
+    2. Ensuite :
+       1. Run ``php bin/console make:migration`` to generate a migration for the new "App\Entity\ResetPasswordRequest" entity.
+       2. Review forms in "src/Form" to customize validation and labels.
+       3. Review and customize the templates in ``templates/reset_password``.
+       4. Make sure your MAILER_DSN env var has the correct settings.
+       5. Create a "forgot your password link" to the app_forgot_password_request route on your login form.
+s
 10. Mise en places des autres entity 
     ``php bin/console make:entity ``
     ou
@@ -40,14 +45,14 @@
 11. Mise en place de fixture  :
     1. composer bundle fixtures : `` composer require --dev doctrine/doctrine-fixtures-bundle ``
     2. composer librairie faker : `` composer require --dev fakerphp/faker ``
-    3. option ajouter un bibliothèque d'image pour fake : ```composer require --dev bluemmb/faker-picsum-photos-provider ``
+    3. option ajouter un bibliothèque d'image pour fake : ``composer require --dev bluemmb/faker-picsum-photos-provider ``
     ```
         use bluemmb\Faker\PicsumPhotosProvider;
 
         $faker = Factory::create('fr_FR')
         $faker->addProvider(new \Bluemmb\Faker\PicsumPhotosProvider($faker))
     ```
-    4. Lancer les fixtures : `` php bin/console doctrine:fixtures:load ``
+    1. Lancer les fixtures : `` php bin/console doctrine:fixtures:load ``
 
 12. Definir les routes et les controllers
 
