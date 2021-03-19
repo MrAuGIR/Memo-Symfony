@@ -20,6 +20,8 @@
     2. bonne pratique de logguer les users après l'enregistrement
     3. Attention après la mise en place du controller de registration, il y a des configuration a faire, exemple: redirectroute dans __verifyUserEmail()__ dans __registrationController__.
     4. faire fichier migrate et doctrine migration
+    5. penser a modifier le controller pour l'enregistrement des users pour enregistrer les donners du user avant le flush()
+    6. avoir créé un controller main (pour la redirection vers la home)
 
 9.  Oublie mot de passe :
     
