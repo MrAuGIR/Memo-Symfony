@@ -60,4 +60,20 @@ s
 
 13. Premier controlleur ``php bin/console make:controller main``
 
+14. Réaliser une interface d'administration
+    lien utile : https://nouvelle-techno.fr/actualites/6-creer-une-interface-dadministration-avec-symfony-5-1-sans-bundle
+
+    1.  Créé un __AdminController__ et le placer dans un dossier admin */src/controller/Admin*
+    2.  modifier le namespace du fichier en *namespace App\Controller\Admin*
+    3.  Dans le fichier *security.yaml* : 
+    ```
+        # Easy way to control access for large sections of your site
+        # Note: Only the *first* access control that matches will be used
+        access_control:
+            - { path: ^/admin, roles: ROLE_ADMIN }
+    ```
+    pour ne permettre que les utilisateurs authentifié avec le level admin à acceder à cette route
+
+    4. Séparer les controller pour chaque entité (utilisation de l'annotation @package)
+    5. Créer le crud d'une entité `` php bin/console make:crud `` (idem deplacer dans le dossier **Admin** en modifiant le mot de passe)
 
