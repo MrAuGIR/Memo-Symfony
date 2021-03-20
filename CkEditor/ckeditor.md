@@ -14,3 +14,17 @@ php bin/console ckeditor:install
 ```
 php bin/console assets:install public
 ```
+
+### D Utiliser CKeditor dans un formType d'une entité
+ajouter le use :
+`` use FOS\CKEditorBundle\Form\Type\CKEditorType; ``
+puis modifier les TextareaType
+```
+        ->add('description', CKEditorType::class, [
+            'label' => "Description de l'évênement",
+            'attr' => [
+                'placeholder' => "Une description de l'évênement"
+            ],
+            'required' => false
+        ])
+```
