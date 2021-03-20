@@ -77,3 +77,7 @@ s
     4. Séparer les controller pour chaque entité (utilisation de l'annotation @package)
     5. Créer le crud d'une entité `` php bin/console make:crud `` (idem deplacer dans le dossier **Admin** en modifiant le mot de passe)
 
+15. Profil utilisateur
+    1.  Créer un formulaire type pour modifier le mot de passe ou le faire en dure dans twig
+    `` php bin/console make:form ``
+

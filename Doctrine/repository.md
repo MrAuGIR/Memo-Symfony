@@ -2,7 +2,7 @@
 
 
 
-#### a - __createQuery()__
+#### a. - __createQuery()__
 ```
 class ProductRepository extends ServiceEntityRepository
 {
@@ -32,7 +32,7 @@ class ProductRepository extends ServiceEntityRepository
 
 ```
 
-#### b - __queryBuilder()__
+#### b. - __queryBuilder()__
 ```
 class ProductRepository extends ServiceEntityRepository
 {
@@ -60,7 +60,7 @@ class ProductRepository extends ServiceEntityRepository
 
 ```
 
-#### c - en ecrivant directement la requète
+#### c. - en ecrivant directement la requète
 ```
 class ProductRepository extends ServiceEntityRepository
 {
@@ -82,7 +82,7 @@ class ProductRepository extends ServiceEntityRepository
 }
 ```
 
-### d - exemple de requètes
+### d. - exemple de requètes
 ```
     /**
      * Returns Annonces between 2 dates
