@@ -1,7 +1,7 @@
 intercepteur de mail :
 
 **mailhob**
-_MAILER_DNS=smtp://localhost:1025
+MAILER_DNS=smtp://localhost:1025
 
 puis aller sur http://localhost:8025/
 
