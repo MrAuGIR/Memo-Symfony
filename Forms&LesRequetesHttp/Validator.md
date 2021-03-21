@@ -4,9 +4,9 @@ On peut ajouter des contraintes sur les champs d'une entité soit on passant par
 soit une seconde approche en ajoutant ces contraintes au(x) formulaire type de l'entité.
 
 **lien utile** :
-    1.  https://symfony.com/doc/current/forms.html#processing-forms
+   https://symfony.com/doc/current/forms.html#processing-forms
 
-    2. https://symfony.com/doc/current/validation.html
+   https://symfony.com/doc/current/validation.html
 
 
 
