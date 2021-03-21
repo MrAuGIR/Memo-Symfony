@@ -33,6 +33,20 @@ soit une seconde approche en ajoutant ces contraintes au(x) formulaire type de l
     ```
 2. `` use Symfony\Component\Validator\Constraints as Assert; `` a rajouter dans les fichiers entités
 
+4. Utilisation des contraintes sur champs passord (dans le cas d'une confirmation de mot de passe)
+```
+    /**
+     * @var string The hashed password
+     * @ORM\Column(type="string")
+     */
+    private $password;
+
+    /**
+     * @Assert\EqualTo(propertyPath="password", message="mot de passe non identique")
+     */
+    public $confirmPassword;
+```
+
 3. ### Message de validation de formulaire (en cas d'erreur ?) - Introduit avec symfony 5.2
  ```
     # config/packages/framework.yaml

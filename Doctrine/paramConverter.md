@@ -1,4 +1,8 @@
 # Param converter
+lien utile : https://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/annotations/converters.html
+
+le use :
+    `` use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter; ``
 
 ###### Les annotations paramConverter permettent de convertir les requètes reçu en objet
 1 - cas standart
