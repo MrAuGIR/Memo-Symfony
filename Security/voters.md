@@ -81,6 +81,15 @@ Permet de déterminer si l'utilisateur connecté à la permission pour réaliser
 2. ### PLacer le fichier dans /src/security/Voter
 
 
+3. ### utilisation du voter créé
+   ```
+     /*on verifie que l'utilisateur connecté est le 'proprietaire' du ticket*/
+    if(!$this->isGranted('delete',$ticket)){
+        $this->addFlash('danger','action non autorisé');
+        return $this->redirectToRoute('transport_show',['transport_id'=> $transport_id]);
+    }
+   ```
+
 
 
 
