@@ -1,6 +1,6 @@
 # Validator
 
-On peut ajouter des contraintes sur les champs d'une entité soit on passant par le fichier entité,
+On peut ajouter des contraintes sur les champs d'une entité soit on passant par le fichier entité avec l'ajout d'annotation,
 soit une seconde approche en ajoutant ces contraintes au(x) formulaire type de l'entité.
 
 **lien utile** :
@@ -42,10 +42,23 @@ soit une seconde approche en ajoutant ces contraintes au(x) formulaire type de l
 
  ```
 
- 4. #### Utiliser la validation par les annotations
+ 4. #### Utiliser la validation 
  ajouter la ligne suivantes au fichier  *config/packages/framework.yaml*
  
 ```
 framework:
     validation: { enabled: true }
+```
+
+5. Contraintes sur les champs des formulaire
+```
+public function buildForm(FormBuilderInterface $builder, array $options)
+{
+    $builder
+        ->add('myField', TextType::class, [
+            'required' => true,
+            'constraints' => [new Length(['min' => 3])],
+        ])
+    ;
+}
 ```

@@ -1,6 +1,9 @@
 
 
 1. création du projet `` composer create-project symfony/website-skeleton <nom-du-projet> `` ou `` symfony new --full <nom-du-projet>``
+   1. ou en installant une version définie:
+      1. `` composer create-project symfony/website-skeleton:"5.1.*" test4 ``
+      2. `` symfony new --full --version=5.2 <nom-du-projet> ``
 
 2. création de la class security user `` php bin/console make:user `` (elle implemente UserInterface)
 
