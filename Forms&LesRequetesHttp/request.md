@@ -21,3 +21,7 @@ recupération des données passé en post
         $name = $request->request->get('name')
     }
 ```
+
+recuperation d'un get avec valeur par defaut si nul
+
+``name = $request->query->get('name','toto')``
