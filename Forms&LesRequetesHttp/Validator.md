@@ -64,7 +64,7 @@ framework:
     validation: { enabled: true }
 ```
 
-5. Contraintes sur les champs des formulaire
+5. #### Contraintes sur les champs des formulaire
 ```
 public function buildForm(FormBuilderInterface $builder, array $options)
 {
