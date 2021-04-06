@@ -25,3 +25,32 @@ recupération des données passé en post
 recuperation d'un get avec valeur par defaut si nul
 
 ``name = $request->query->get('name','toto')``
+
+
+### form many to many
+1. dans le controller 
+```
+
+public function addArticle(Request $request):Response
+{
+    $article = new Article()
+    $form = $this->createForm(Article::class, $article);
+
+    $form->handleRequest($request);
+
+    if($form->isSubmitted() & $form->isValid())
+    {
+        $em = $this->getDoctrine()->getManager();
+        $em->persist($article);
+        $em->flush();
+
+        return $this->redirectToRoute('article');
+    }
+
+    return $this->return('article/ajout.html.twig, [
+        'form' => $form->createView()
+    ])
+}
+
+
+```

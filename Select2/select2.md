@@ -16,3 +16,34 @@
         });
     </script>
     ```
+
+4. ###### Script Jquery pour un select a choix multiple et possiblité d'ajouter un nouvel element
+```
+    $(function() {
+        $('.select-types').select2({
+            tags: true,
+            tokenSeparators: [',',' ']
+        }).on('change', function(e){
+            // on recupère les options selectionnée dans le select (this)
+            let label = $(this).find("[data-select2-tag=true]"); 
+            //verifie que le label selectionner n'est pas deja dans la base de donnée ou deja inserer
+            if(label.length &&  $.inArray(label.val(), $(this).val() != -1)){ 
+                //requète ajax pour envoyer les info
+                $.ajax({
+                    url: "/writer/add/ajax"+label.val(),
+                    type: "POST",
+                }).done(function(data){
+                    //on rajoute la nouvelle option pour ne pas qu'elle ne soit encore considéré comme nouvelle
+                    label.replaceWith(`<option selected value="${data.id}">${label.val()}</option>`)
+                })
+            }
+        });
+
+        $('.select-writers').select2({
+            tags: true,
+            tokenSeparators: [',',' ']
+        }).on('change', function(e){
+            
+        });
+    });
+```
