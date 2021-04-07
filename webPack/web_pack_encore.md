@@ -70,3 +70,9 @@ On peut l'importer dans un fichier scss par exemple _global.scss_ ou  renommer l
    `` yarn add jquery popper.js --dev ``
 
 6. lancer la compilation en manuelle ou en automatique
+
+
+7. Mettre en ligne
+   1. soit installer node puis yarn et ensuite lancé la compilation
+   2. soit build en local `` yarn run encore production ``
+   et copier le fichier /public/build en local dans le dossier public de l'hebergement
