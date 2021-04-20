@@ -1,5 +1,7 @@
 # Communiquer avec la base de donnée via doctrine dans symfony
 
+### commande schéma (a classer et expliquer)
+`` php bin/console doctrine:schema:create ``
 
 ## 1 - avec les méthodes implémenté dans le controlleur par la class **abstractControlleur**
 
