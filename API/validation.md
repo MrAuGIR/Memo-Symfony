@@ -47,5 +47,5 @@ public static function validationGroups(self $post){
 
 ```
 
-**important** en cas de modifcation 
+**important** en cas de modifcation d'une relation
 dans les annotation `` cascade="persist" ``
