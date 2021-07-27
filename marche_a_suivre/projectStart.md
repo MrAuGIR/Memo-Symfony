@@ -18,7 +18,7 @@
 7. Modification du chemin du logout dans la fonction de la class créé
 
 8. formulaire d'enregistrement : ``php bin/console make:registration-form``
-    1. Possible warning si **symfonycasts/verify-email-bundle** non installé et option d'email selectionné
+    1. (plus nécéssaire depuis symfony >5.3) Possible warning si **symfonycasts/verify-email-bundle** non installé et option d'email selectionné
         ``composer require symfonycasts/verify-email-bundle``
     2. bonne pratique de logguer les users après l'enregistrement
     3. Attention après la mise en place du controller de registration, il y a des configuration a faire, exemple: redirectroute dans __verifyUserEmail()__ dans __registrationController__.
