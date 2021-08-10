@@ -30,5 +30,8 @@ class HelloController
 
 ```
 
-si on fait un `` php bin/console debug:autowiring `` 
+si on fait un `` php bin/console debug:autowiring --all`` le service apparait
+
+## dans le cas des bundles, symfony va automatiquement rajouter les services au conteneurs de service
+les bundles ajouter apparaissent dans bundles.php, ce qui permet a symfony de faire connaitres au conteneurs de services les nouveaux services (nouvelles classes).
 

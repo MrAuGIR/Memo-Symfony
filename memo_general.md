@@ -16,4 +16,4 @@ installe le bundle **sensio/framework-extra-bundle** ainsi que les librairies **
 `` composer require symfony/routing ``
 
 * conteneur de services (afficher les services disponibles)
-`` php bin/console debug:autowiring ``
+`` php bin/console debug:autowiring --all ``
