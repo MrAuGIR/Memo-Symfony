@@ -6,7 +6,7 @@ soure : https://twig.symfony.com/doc/3.x/templates.html#including-other-template
     {
         
         $html = $twig->render('hello.html.twig',[
-            'formateur' => [
+            'formateur1' => [
                 'prenom' => 'lior',
                 'nom'=> 'chamlat',
                 'age' => 33
