@@ -19,4 +19,4 @@ installe le bundle **sensio/framework-extra-bundle** ainsi que les librairies **
 `` php bin/console debug:autowiring --all ``
 
 * bundle fixture symfony
-* `` composer require orm-fixtures ``
+`` composer require orm-fixtures ``
